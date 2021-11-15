@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat";
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: aqua; */
+}
+
+nav {
+    position: absolute;
+    /* top: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 50px;
+    /* background-color: beige; */
+    z-index: 1;
+}
+
+#nlft,
+#nrgt {
+    text-transform: capitalize;
+    font-size: 12px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+nav #navlogo {
+    height: 35px;
+    margin-right: 80px;
+    mix-blend-mode: color-dodge;
+}
+
+nav i {
+    display: none;
+}
+
+#left {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    min-height: 100vh;
+    color: #fff;
+    background-color: rgb(23, 23, 23);
+}
+
+#left #lftcan {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    filter: drop-shadow(0px 20px 50px rgba(0, 0, 0, 0.8));
+    z-index: 2;
+}
+
+#left #lftlogo {
+    height: 90px;
+    mix-blend-mode: color-dodge;
+}
+
+#lc {
+    margin-right: 200px;
+    text-align: right;
+    margin-left: 50px;
+    /* background-color: aquamarine; */
+}
+
+#left p {
+    font-size: 12px;
+    padding: 20px 0;
+    /* width: 73%; */
+    font-weight: 300;
+    text-align: justify;
+}
+
+#left button {
+    font-size: 10px;
+    padding: 10px 100px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border: none;
+    background: linear-gradient(170deg, rgb(237, 30, 30), rgb(46, 7, 7));
+    color: white;
+    text-transform: capitalize;
+}
+
+#right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-height: 100vh;
+    background-color: #f00000;
+}
+
+#rc {
+    width: 300px;
+    margin-left: 120px;
+}
+
+#right p {
+    text-transform: capitalize;
+    color: #fff;
+}
+
+#right #underline {
+    width: 140px;
+    height: 3px;
+    margin: 5px 0px 10px 0px;
+    background-color: #fff;
+}
+
+#right #prop {
+    width: 100%;
+}
+
+#prop>p {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.bgper {
+    width: 100%;
+    height: 6px;
+    background-color: #fff;
+    margin-bottom: 30px;
+}
+
+.per {
+    position: relative;
+    width: 78%;
+    height: 100%;
+    background-color: rgb(118, 15, 15);
+}
+
+.tip {
+    position: absolute;
+    border: 6px solid #fff;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.val {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transform: translate(50%, 0);
+    margin-top: 7px;
+    padding: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+#right button {
+    border: none;
+    padding: 8px 30px;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background: linear-gradient(170deg, rgb(237, 30, 30), rgb(46, 7, 7));
+    text-transform: capitalize;
+    color: #fff;
+    margin-top: 10px;
+}
+
+#addedsuger {
+    width: 78%;
+}
+
+#carbohydrate {
+    width: 40%;
+}
+
+#sodium {
+    width: 20%;
+}
+
+@media(max-width:500px) {
+    #main {
+        flex-direction: column;
+    }
+    nav {
+        padding: 0 20px;
+    }
+    nav a {
+        display: none;
+    }
+    nav i {
+        display: initial;
+        color: #fff;
+    }
+    #left {
+        flex-direction: column;
+        padding: initial;
+        width: 100%;
+    }
+    #right {
+        width: 100%;
+        min-height: initial;
+        padding: initial;
+    }
+    #right #prop {
+        width: initial;
+    }
+    #left #lftcan {
+        position: static;
+        transform: initial;
+        height: 80vw;
+        display: block;
+        margin: 40px auto 20px auto;
+        filter: drop-shadow(0px 20px 40px rgba(77, 77, 77, 0.8));
+    }
+    #right #rc {
+        display: block;
+        width: 70vw;
+        margin: 100px auto 100px auto;
+    }
+    #left #lftlogo {
+        margin-top: 130px;
+    }
+    #left #lc {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    #left p {
+        padding: 12px 0;
+        width: 90%;
+    }
+    #left button {
+        padding: 10px 40px;
+    }
+}
